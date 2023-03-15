@@ -20,7 +20,7 @@ namespace article_summariser.API.Controllers
         {
             var summaries = await _db.GetSummariesAsync();
 
-            return Ok(summaries);
+            return !summaries.Any() ? NotFound() : Ok(summaries);
         }
 
         [HttpGet("{id}")]
@@ -28,7 +28,7 @@ namespace article_summariser.API.Controllers
         {
             var summary = await _db.GetSummaryAsync(id);
 
-            return Ok(summary);
+            return summary == null ? NotFound() : Ok(summary);
         }
 
         [HttpPost]

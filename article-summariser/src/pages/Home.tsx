@@ -10,7 +10,7 @@ const Home = () => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Generate summary</ModalHeader>
+          <ModalHeader fontFamily={'heading'}>Generate summary</ModalHeader>
           <ModalBody>
             <GenerateArticleForm onClose={onClose} />
           </ModalBody>

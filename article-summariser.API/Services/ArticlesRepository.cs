@@ -43,8 +43,8 @@ public class ArticlesRepository : IArticlesRepository
         };
 
         var response = await client.SendAsync(request);
-        
         response.EnsureSuccessStatusCode();
+        
         var body = await response.Content.ReadAsStringAsync();
         var data = JsonConvert.DeserializeObject<ApiData>(body);
 
