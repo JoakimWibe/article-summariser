@@ -12,19 +12,24 @@ const ArticleGallery = () => {
   const [inputValue, setInputValue] = useState('');
 
   const deleteArticle = async (id: number) => {
-    console.log(id);
-    try {
-      await axios.delete(baseUrl + '/' + id);
-      setArticles(articles.filter((summary: Article) => summary.id !== id));
-    } catch (error) {
-      console.log(error);
+    if (window.confirm('Are you sure you want to delete this article?')) {
+      try {
+        await axios.delete(baseUrl + '/' + id);
+        setArticles(articles.filter((summary: Article) => summary.id !== id));
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
   return (
     <>
-      {articles.length < 1 && <Text textAlign={'center'}>No articles yet! Fill out the form to generate one.</Text>}
-      {articles.length > 0 && <Input onChange={e => setInputValue(e.target.value)} w={{ md: 'lg', sm: '100%' }} mb={10} placeholder="Search..." />}
+      {articles.length < 1 && (
+        <Text mt={10} textAlign={'center'}>
+          No articles yet! Fill out the form to generate one.
+        </Text>
+      )}
+      {articles.length > 0 && <Input my={10} width={{ md: 'lg', sm: 'md' }} onChange={e => setInputValue(e.target.value)} placeholder="Search..." />}
 
       <Flex direction={'column'}>
         {articles

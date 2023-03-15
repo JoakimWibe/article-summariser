@@ -1,16 +1,4 @@
-import {
-  Button,
-  Divider,
-  Flex,
-  Heading,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Button, Flex, Heading, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react';
 import ArticleGallery from '../components/ArticleGallery';
 import GenerateArticleForm from '../components/GenerateArticleForm';
 
@@ -37,8 +25,6 @@ const Home = () => {
           Generate summary
         </Button>
       </Flex>
-
-      <Divider width={{ md: 'lg', sm: '100%' }} m={5} />
 
       <ArticleGallery />
     </Flex>

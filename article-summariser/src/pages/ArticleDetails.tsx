@@ -30,7 +30,7 @@ const ArticleDetails = () => {
   };
 
   return (
-    <Flex pt={32} maxW={'xl'} mx={{ sm: 5, md: 'auto' }} direction={'column'}>
+    <Flex pb={5} pt={28} maxW={'xl'} mx={{ sm: 5, md: 'auto' }} direction={'column'}>
       <Breadcrumb>
         <BreadcrumbItem>
           <Link className="link" to="/">
