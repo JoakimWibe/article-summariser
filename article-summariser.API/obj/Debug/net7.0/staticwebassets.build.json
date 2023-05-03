@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "G88BfI0ct9diuZjSxOovxuK7DSZBfhGteqgt6MmSBhs=",
+  "Source": "article-summariser.API",
+  "BasePath": "_content/article-summariser.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
