@@ -7,8 +7,6 @@ import { baseUrl } from './constants/api';
 import { ArticleContext } from './context/Context';
 import ArticleDetails from './pages/ArticleDetails';
 import Home from './pages/Home';
-import '@fontsource/cabin';
-import '@fontsource/roboto-condensed';
 
 export const App = () => {
   const [articles, setArticles] = useState([]);
