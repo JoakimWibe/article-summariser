@@ -1,1 +1,1 @@
-export const baseUrl = "http://localhost:5222/api/Articles"
+export const baseUrl = "https://article-summariser-api.azurewebsites.net/api/Articles"
