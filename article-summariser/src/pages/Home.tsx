@@ -17,7 +17,7 @@ const Home = () => {
         </ModalContent>
       </Modal>
 
-      <Flex mt={5} w={'lg'} direction={{ sm: 'column', md: 'row' }} justifyContent={'space-between'} alignItems={'center'}>
+      <Flex mt={5} w={'lg'} direction={{ base: 'column', md: 'row' }} justifyContent={'space-between'} alignItems={'center'}>
         <Heading my={5} as={'h3'}>
           Articles
         </Heading>

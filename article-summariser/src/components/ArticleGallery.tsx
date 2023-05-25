@@ -29,14 +29,14 @@ const ArticleGallery = () => {
           No articles yet! Fill out the form to generate one.
         </Text>
       )}
-      {articles.length > 0 && <Input my={10} width={{ md: 'lg', sm: 'md' }} onChange={e => setInputValue(e.target.value)} placeholder="Search..." />}
+      {articles.length > 0 && <Input my={10} width={{ md: 'lg', base: 'md' }} onChange={e => setInputValue(e.target.value)} placeholder="Search..." />}
 
       <Flex direction={'column'}>
         {articles
           .filter(article => article.title.toLowerCase().includes(inputValue))
           .map((article: Article) => (
-            <Card mx={5} mb={5} key={article.id} direction={{ md: 'row', sm: 'column' }} overflow="hidden" variant="outline">
-              <Image objectFit="cover" maxW={{ sm: '100%', md: '200px' }} src={article.imageUrl} />
+            <Card mx={5} mb={5} key={article.id} direction={{ md: 'row', base: 'column' }} overflow="hidden" variant="outline">
+              <Image objectFit="cover" maxW={{ base: '100%', md: '200px' }} src={article.imageUrl} />
 
               <Stack>
                 <CardBody>
